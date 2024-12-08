@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ddkqgr" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.0.0-dev">
+  <bpmn:collaboration id="Collaboration_06ftemy">
+    <bpmn:participant id="Participant_0nu1w1b" processRef="Process_1d4oa6g46" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1d4oa6g46" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_13a8hlp</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_13a8hlp" sourceRef="StartEvent_1" targetRef="Activity_0wg237z" />
+    <bpmn:sequenceFlow id="Flow_159vlcq" sourceRef="Activity_0wg237z" targetRef="Event_1d13yen" />
+    <bpmn:task id="Activity_0wg237z" name="Hello, Camunda!">
+      <bpmn:incoming>Flow_13a8hlp</bpmn:incoming>
+      <bpmn:outgoing>Flow_159vlcq</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_1d13yen">
+      <bpmn:incoming>Flow_159vlcq</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_06ftemy">
+      <bpmndi:BPMNShape id="Participant_0nu1w1b_di" bpmnElement="Participant_0nu1w1b" isHorizontal="true">
+        <dc:Bounds x="110" y="30" width="1580" height="460" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="342" y="232" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wg237z_di" bpmnElement="Activity_0wg237z">
+        <dc:Bounds x="475" y="210" width="130" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1d13yen_di" bpmnElement="Event_1d13yen">
+        <dc:Bounds x="682" y="232" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_13a8hlp_di" bpmnElement="Flow_13a8hlp">
+        <di:waypoint x="378" y="250" />
+        <di:waypoint x="475" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_159vlcq_di" bpmnElement="Flow_159vlcq">
+        <di:waypoint x="605" y="250" />
+        <di:waypoint x="682" y="250" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
